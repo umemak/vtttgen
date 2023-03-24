@@ -1,0 +1,2 @@
+# vtttgen
+WEBVTT Thumbnail Generator
