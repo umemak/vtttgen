@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/umemak/vtttgen"
 	"github.com/urfave/cli/v2"
 )
 
@@ -14,6 +15,11 @@ func main() {
 	app.Name = "vtttgen"
 	app.Usage = "WEBVTT Thumbnail GENerator"
 	app.Flags = []cli.Flag{
+		&cli.StringFlag{
+			Name:  "target",
+			Value: "",
+			Usage: "target dir name",
+		},
 		&cli.Int64Flag{
 			Name:  "width",
 			Value: 240,
@@ -35,6 +41,7 @@ func main() {
 			Usage: "thumbnail rows",
 		},
 	}
+	app.Action = vtttgen.Run
 	err := app.Run(os.Args)
 	if err != nil {
 		log.Fatal(err)
