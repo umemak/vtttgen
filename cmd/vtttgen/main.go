@@ -21,23 +21,13 @@ func main() {
 			Usage: "target dir name",
 		},
 		&cli.Int64Flag{
-			Name:  "width",
-			Value: 240,
-			Usage: "thumbnail width",
-		},
-		&cli.Int64Flag{
-			Name:  "height",
-			Value: 120,
-			Usage: "thumbnail height",
-		},
-		&cli.Int64Flag{
 			Name:  "columns",
-			Value: 10,
+			Value: 6,
 			Usage: "thumbnail columns",
 		},
 		&cli.Int64Flag{
 			Name:  "rows",
-			Value: 6,
+			Value: 10,
 			Usage: "thumbnail rows",
 		},
 	}
